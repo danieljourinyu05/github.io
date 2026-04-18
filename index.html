@@ -1,0 +1,168 @@
+    <!DOCTYPE html>
+    <html lang="zh-TW">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Jou Yiu Lun | Portfolio</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+        <style>
+            body { font-family: 'Helvetica Neue', Arial, sans-serif; }
+            .hero-bg {
+                background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.75)), url('https://picsum.photos/id/1015/2000/1200') center/cover no-repeat;
+            }
+            .nav-link:hover { color: #3b82f6; transform: translateY(-2px); }
+            .project-card:hover { transform: translateY(-12px); box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25); }
+        /* modal styles removed — each project now opens its own page */
+        </style>
+    </head>
+    <body class="bg-zinc-50 text-zinc-900">
+
+        <!-- Navbar -->
+        <nav class="fixed top-0 w-full bg-white/90 backdrop-blur-md z-50 border-b">
+            <div class="max-w-6xl mx-auto px-6 py-5 flex justify-between items-center">
+                <div class="text-2xl font-light tracking-widest">JOU YIU LUN</div>
+                <div class="flex gap-8 text-sm uppercase tracking-widest items-center">
+                    <a href="#about" class="nav-link" data-i18n-key="nav_about">About</a>
+                    <a href="#projects" class="nav-link" data-i18n-key="nav_projects">Projects</a>
+                    <a href="#contact" class="nav-link" data-i18n-key="nav_contact">Contact</a>
+                    <div class="ml-4 flex items-center gap-2">
+                        <button id="lang-zh" class="text-sm px-3 py-1 rounded hover:bg-zinc-100">繁中</button>
+                        <button id="lang-zhcn" class="text-sm px-3 py-1 rounded hover:bg-zinc-100">简体</button>
+                        <button id="lang-en" class="text-sm px-3 py-1 rounded hover:bg-zinc-100">EN</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+    <!-- Hero -->
+        <section class="bg-black min-h-[90vh] flex flex-col justify-center text-white py-12">
+            <div class="text-center max-w-3xl px-6 mx-auto">
+                <h1 class="text-8xl md:text-9xl lg:text-9xl font-bold tracking-tighter mb-4" data-i18n-key="hero_welcome">Welcome</h1>
+                
+                    <h2 class="text-3xl md:text-5xl lg:text-5xl font-bold tracking-tighter mb-2" data-i18n-key="hero_to">to my website</h2>
+                    <div class="text-sm opacity-90 mb-6">JOU YIU LUN</div>
+                    <a href="#projects" id="view-work" class="mt-12 inline-block border border-white px-10 py-4 text-sm tracking-widest hover:bg-white hover:text-black transition-colors" data-i18n-key="hero_button">
+                    VIEW MY WORK
+                </a>
+            </div>
+        </section>
+
+        <!-- About Me -->
+        <section id="about" class="py-24 bg-white">
+            <div class="max-w-4xl mx-auto px-6 text-center">
+                <h2 class="text-5xl font-bold mb-8" data-i18n-key="about_heading">About Me</h2>
+                <div class="space-y-6 text-lg leading-relaxed text-zinc-600 mx-auto">
+                    <p data-i18n-key="about_p1"></p>
+                    <p class="text-center text-2xl md:text-4xl lg:text-3xl font-bold mt-6" data-i18n-key="about_slogan"></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section id="projects" class="py-24 bg-zinc-100">
+            <div class="max-w-6xl mx-auto px-6">
+                <h2 class="text-5xl font-bold text-center mb-16" data-i18n-key="projects_heading">My News Projects</h2>
+            
+                <div class="grid md:grid-cols-2 gap-8">
+
+                    <!-- 中文新聞 -->
+                    <a href="chinese.html" target="_blank" class="project-card group bg-white rounded-2xl overflow-hidden shadow-sm">
+                        <div class="h-64 bg-zinc-200">
+                            <img src="https://www.image2url.com/r2/default/images/1776510190079-ef21ff8b-ddf1-4718-9080-cd543829a55e.png" alt="中文新聞" class="w-full h-full object-cover group-hover:scale-105 transition-transform">
+                        </div>
+                        <div class="p-8">
+                            <h3 class="text-2xl font-light mb-2" data-i18n-key="chinese_title">中文新聞</h3>
+                            <p class="text-zinc-500" data-i18n-key="chinese_desc">本地及兩岸新聞報導作品集</p>
+                        </div>
+                    </a>
+
+                    <!-- International News -->
+                    <a href="international.html" target="_blank" class="project-card group bg-white rounded-2xl overflow-hidden shadow-sm">
+                        <div class="h-64 bg-zinc-200">
+                            <img src="https://www.image2url.com/r2/default/images/1776511019735-6f6d03d9-2bca-42a0-a21b-beb9bdedcd0a.jpg" alt="International News" class="w-full h-full object-cover group-hover:scale-105 transition-transform">
+                        </div>
+                        <div class="p-8">
+                            <h3 class="text-2xl font-light mb-2" data-i18n-key="international_title">International News</h3>
+                            <p class="text-zinc-500" data-i18n-key="international_desc">Global affairs and breaking news coverage</p>
+                        </div>
+                    </a>
+
+                    <!-- Financial News -->
+                    <a href="financial.html" target="_blank" class="project-card group bg-white rounded-2xl overflow-hidden shadow-sm">
+                        <div class="h-64 bg-zinc-200">
+                            <img src="https://www.image2url.com/r2/default/images/1776511215959-271100a2-f2dc-4f67-9e90-576c89a39f7b.jpg" alt="Financial News" class="w-full h-full object-cover group-hover:scale-105 transition-transform">
+                        </div>
+                        <div class="p-8">
+                            <h3 class="text-2xl font-light mb-2" data-i18n-key="financial_title">Financial News</h3>
+                            <p class="text-zinc-500" data-i18n-key="financial_desc">市場分析與財經報導</p>
+                        </div>
+                    </a>
+
+                    <!-- Data News -->
+                    <a href="data.html" target="_blank" class="project-card group bg-white rounded-2xl overflow-hidden shadow-sm">
+                        <div class="h-64 bg-zinc-200">
+                            <img src="https://www.image2url.com/r2/default/images/1776517692152-846c95a8-ce32-4feb-8617-d7c8d39bd9a5.png" alt="Data News" class="w-full h-full object-cover group-hover:scale-105 transition-transform">
+                        </div>
+                        <div class="p-8">
+                            <h3 class="text-2xl font-light mb-2" data-i18n-key="data_title">Data News</h3>
+                            <p class="text-zinc-500" data-i18n-key="data_desc">數據視覺化與調查報導</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modals removed — each project opens its own page now -->
+
+        <!-- Contact -->
+        <section id="contact" class="py-24 bg-white">
+            <div class="max-w-6xl mx-auto px-6">
+                <h2 class="text-5xl font-bold mb-12 text-left" data-i18n-key="contact_heading">Get in Touch</h2>
+                <div class="grid md:grid-cols-2 gap-8 items-start">
+                    <div class="text-left">
+                        <p class="text-2xl mb-4" data-i18n-key="contact_phone">852-67608509</p>
+                        <p class="text-2xl mb-6">
+                            <a id="contact-email-link" href="mailto:joullun@gmail.com" class="hover:underline" data-i18n-key="contact_email">joullun@gmail.com</a>
+                        </p>
+                        <div class="mb-8 flex items-start gap-4">
+                            <a href="https://www.xiaohongshu.com/user/profile/68fc9b37000000003700248f?tab=fav&subTab=note" target="_blank" rel="noopener noreferrer" class="inline-block">
+                                <img src="https://www.image2url.com/r2/default/images/1776511747381-15659cb7-f844-421a-aa8a-a9c327dd2420.png" alt="小紅書" class="w-8 h-8 object-contain">
+                            </a>
+                            <a href="https://www.instagram.com/rinyu1226_/" target="_blank" rel="noopener noreferrer" class="inline-block">
+                                <img src="https://www.image2url.com/r2/default/images/1776512139248-6dcefddb-45af-4021-a3e8-1296d94bfb76.avif" alt="Instagram" class="w-8 h-8 object-contain">
+                            </a>
+                        </div>
+                        <p class="mt-16 text-sm text-zinc-400">© 2026 Jou Yiu Lun</p>
+                    </div>
+
+                    <div>
+                        <form id="contact-form" class="space-y-4 bg-zinc-50 p-6 rounded-lg shadow-sm">
+                            <input type="text" id="cf-name" class="w-full border px-3 py-2 rounded" data-i18n-placeholder data-i18n-placeholder="placeholder_name" placeholder="Your name">
+                            <input type="email" id="cf-email" class="w-full border px-3 py-2 rounded" data-i18n-placeholder data-i18n-placeholder="placeholder_email" placeholder="Your email">
+                            <input type="text" id="cf-subject" class="w-full border px-3 py-2 rounded" data-i18n-placeholder data-i18n-placeholder="placeholder_subject" placeholder="Subject">
+                            <textarea id="cf-message" rows="6" class="w-full border px-3 py-2 rounded" data-i18n-placeholder data-i18n-placeholder="placeholder_message" placeholder="Message"></textarea>
+                            <div class="flex justify-end">
+                                <button type="submit" class="bg-black text-white px-6 py-2 rounded" data-i18n-key="contact_send">Send</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script>
+            document.getElementById('contact-form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                const name = encodeURIComponent(document.getElementById('cf-name').value || '');
+                const email = encodeURIComponent(document.getElementById('cf-email').value || '');
+                const subject = encodeURIComponent(document.getElementById('cf-subject').value || 'Contact from website');
+                const message = encodeURIComponent(document.getElementById('cf-message').value || '');
+                const body = encodeURIComponent('Name: ' + decodeURIComponent(name) + '\nEmail: ' + decodeURIComponent(email) + '\n\n' + decodeURIComponent(message));
+                window.location.href = `mailto:joullun@gmail.com?subject=${subject}&body=${body}`;
+            });
+        </script>
+
+    <!-- Shared i18n -->
+    <script src="i18n.js"></script>
+    </body>
+    </html>
